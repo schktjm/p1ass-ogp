@@ -3,7 +3,7 @@ import { renderToString } from 'react-dom/server'
 import { ParsedRequest } from './types';
 
 
-const Svg = ({ num, name }: { num: string, name: string }) => {
+const Svg = ({ name }: { num?: string, name: string }) => {
     return (
         <svg width={1200} height={630} viewBox="0 0 600 315" fill="none">
             <rect width={600} height={315} rx={0} fill="#000" />
@@ -21,7 +21,7 @@ const Svg = ({ num, name }: { num: string, name: string }) => {
             <path d="M130.875 119.764C130.875 119.764 104.805 116.565 104.805 137.357" stroke="#545454" strokeWidth="15.6099" strokeLinecap="round" />
             <text x={233} y={154} textLength={206} lengthAdjust="spacing" fontFamily="Turret Road" fill="#E5966F" fontSize={64}>p1ass</text>
             <text x={137} y={218} textLength={325} lengthAdjust="spacing" fontFamily="Roboto" fill="#E5966F" fontSize={14} fontWeight={100}>UNOFFICIAL FANCLUB MEMBERS'S CARD</text>
-            <text x={45} y={257} fontFamily="Roboto" fill="#FEC283" fontSize={14} fontWeight={100} letterSpacing={1} >No.{num.padStart(4, '0')}</text>
+            {/* <text x={45} y={257} fontFamily="Roboto" fill="#FEC283" fontSize={14} fontWeight={100} letterSpacing={1} >No.{num.padStart(4, '0')}</text> */}
             <text x={45} y={277} fontFamily="Roboto" fill="#FEC283" fontSize={14} fontWeight={100} letterSpacing={5}>{name}</text>
             <defs>
                 <linearGradient id="paint0_linear" x1="595.595" y1={13} x2="15.7665" y2="305.502" gradientUnits="userSpaceOnUse">
